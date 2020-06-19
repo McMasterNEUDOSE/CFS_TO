@@ -1,5 +1,5 @@
 ###############################################################################
-# File: CFS Application Table Makefile 
+# File: CFS Application Table Makefile
 #
 #
 # History:
@@ -16,7 +16,7 @@ APPTARGET = to
 # 1. The table file name must be the same as the C source file name
 # 2. There must be a single C source file for each table
 #
-TABLES = to_config.tbl to_config_2.tbl 
+TABLES = to_config.tbl to_config_2.tbl
 
 ##################################################################################
 # Normally, nothing has to be changed below this line
@@ -40,7 +40,7 @@ SOURCES = $(OBJS:.o=.c)
 ##
 ## Specify extra C Flags needed to build this subsystem
 ##
-LOCAL_COPTS = 
+LOCAL_COPTS =
 
 ##
 ## EXEDIR is defined here, just in case it needs to be different for a custom
@@ -49,19 +49,19 @@ LOCAL_COPTS =
 EXEDIR=../exe
 
 ########################################################################
-# Should not have to change below this line, except for customized 
+# Should not have to change below this line, except for customized
 # Mission and cFE directory structures
 ########################################################################
 
 #
-# Set build type to CFE_APP. This allows us to 
+# Set build type to CFE_APP. This allows us to
 # define different compiler flags for the cFE Core and Apps.
-# 
+#
 BUILD_TYPE = CFE_TABLE
 
-## 
+##
 ## Include all necessary cFE make rules
-## Any of these can be copied to a local file and 
+## Any of these can be copied to a local file and
 ## changed if needed.
 ##
 ##
@@ -98,13 +98,13 @@ INCLUDE_PATH = \
 -I../inc
 
 ##
-## Define the VPATH make variable. 
+## Define the VPATH make variable.
 ## This can be modified to include source from another directory.
 ## If there is no corresponding app in the cfe-apps directory, then this can be discarded, or
-## if the mission chooses to put the src in another directory such as "src", then that can be 
+## if the mission chooses to put the src in another directory such as "src", then that can be
 ## added here as well.
 ##
-VPATH = $(CFS_APP_SRC)/$(APPTARGET)/fsw/tables 
+VPATH = $(CFS_APP_SRC)/$(APPTARGET)/fsw/tables
 
 ##
 ## Include the common make rules for building a cFE Application
